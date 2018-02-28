@@ -1,15 +1,15 @@
-# import-esri-model
+# esri-import
 基于注解的ArcGIS For JavaScript 模块加载器。
 
 #安装
 ```shell
-$ npm install import-esri-model --save
+$ npm install esri-import --save
 ```
 ## 使用
 Map.js
 ```javascript
 import React,{Component} from 'react';
-import {importEsri, awaitEsri} from 'import-esri-model';
+import {importEsri, awaitEsri} from 'esri-import';
 //指定ArcGIS For JavaScript 的入口，系统中只需指定一次，默认为：https://js.arcgis.com/4.5/init.js。
 importEsri.libraryRoot = "http://localhost:8080/arcgis_js_api/library/4.5/init.js";
 
