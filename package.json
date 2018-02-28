@@ -1,0 +1,26 @@
+{
+  "name": "import-esri-model",
+  "version": "1.0.0",
+  "description": "esri loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giscrazier/importEsriModel.git"
+  },
+  "keywords": [
+    "esri",
+    "loader"
+  ],
+  "author": "gissky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giscrazier/importEsriModel/issues"
+  },
+  "homepage": "https://github.com/giscrazier/importEsriModel#readme",
+  "dependencies": {
+    "esri-loader": "^2.2.0"
+  }
+}
