@@ -64,3 +64,5 @@ export default class Map extends Component{
 `importEsri`接收一个数组，用来来注解一个类，它会为该类添加一个静态属性`esri`。该静态属性中包含了你所导入的esri JavaScript模块。
 
 当要使用这些导入的模块时，最好为相应的方法添加了`@awaitEsri`注解，它可以确保你所注解的方法在模块完全加载完成才执行，但是要知道，添加了该注解后，你的方法的返回值就变成了`Promise`,如果你的方法有返回值，则须通过`promise`的`then`方法来获取。
+
+如果好用，可以star下 :clap: :clap: :clap:
