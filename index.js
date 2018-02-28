@@ -20,25 +20,24 @@ function importEsri(classes) {
         target[__esri__] = new Promise(resolve=>{
             gp.then(()=>{
                 return loadModules(classes,{
-                    url: esri_library_root
+                    url: importEsri.libraryRoot
                 });
-            })
-                .then(function () {
-                    let ags = arguments[0];
-                    let args = classes.map(function (cls) {
-                        let clz = cls.split('/');
-                        return clz[clz.length - 1];
-                    });
-                    target.esri={};
-                    args.forEach((arg,idx)=>{
-                        target.esri[arg] = ags[idx];
-                    });
-                    resolve(target.esri);
-                })
-                .catch(function (err) {
-                    console.log(err);
-                    resolve({});
+            }).then(function () {
+                let ags = arguments[0];
+                let args = classes.map(function (cls) {
+                    let clz = cls.split('/');
+                    return clz[clz.length - 1];
                 });
+                target.esri={};
+                args.forEach((arg,idx)=>{
+                    target.esri[arg] = ags[idx];
+                });
+                resolve(target.esri);
+            }).catch((err)=>{
+                console.error(err);
+                target.esri={};
+                resolve(target.esri);
+            });
         });
     }
 }
