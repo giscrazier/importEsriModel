@@ -71,7 +71,8 @@ importEsri.libraryRoot = "https://js.arcgis.com/4.8/";
 function awaitEsri(target, name, descriptor) {
     let oldFun =  target[name];
     descriptor.value=function () {
-        let promise = this.__proto__.constructor[__esri__];
+        //let promise = this.__proto__.constructor[__esri__];
+        let promise = target.constructor[__esri__];
         return promise.then(()=>{
             return Promise.resolve(oldFun.apply(this,arguments))
         });
