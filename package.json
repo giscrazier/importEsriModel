@@ -1,6 +1,6 @@
 {
   "name": "esri-import",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "基于注解的ArcGIS For JavaScript 模块加载器。",
   "main": "./dist/index.js",
   "scripts": {

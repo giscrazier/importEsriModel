@@ -1,5 +1,5 @@
-declare function importEsri(classes:string[]):(target:any)=>void;
-declare function awaitEsri(target:any,name:any,descriptor:any):any;
-interface importEsri{
+export function importEsri(classes:string[]):(target:any)=>void;
+export function awaitEsri(target:any,name:any,descriptor:any):any;
+export interface importEsri{
     libraryRoot: string
 }

@@ -1,0 +1,1 @@
+import {awaitEsri} from '../index';
